@@ -5,12 +5,12 @@ const getStream = require('get-stream')
 const npmFetch = require('npm-registry-fetch')
 
 const SearchOpts = figgyPudding({
-  detailed: {default: false},
-  limit: {default: 20},
-  from: {default: 0},
-  quality: {default: 0.65},
-  popularity: {default: 0.98},
-  maintenance: {default: 0.5},
+  detailed: { default: false },
+  limit: { default: 20 },
+  from: { default: 0 },
+  quality: { default: 0.65 },
+  popularity: { default: 0.98 },
+  maintenance: { default: 0.5 },
   sortBy: {}
 })
 

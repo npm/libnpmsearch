@@ -6,7 +6,7 @@ const qs = require('querystring')
 const test = require('tap').test
 const tnock = require('./util/tnock.js')
 
-const OPTS = figgyPudding({registry: {}})({
+const OPTS = figgyPudding({ registry: {} })({
   registry: 'https://mock.reg/'
 })
 
@@ -81,7 +81,7 @@ test('accepts a limit option', t => {
       { package: { name: 'cool', version: '1.0.0' } }
     ]
   })
-  return search('oo', OPTS.concat({limit: 3})).then(results => {
+  return search('oo', OPTS.concat({ limit: 3 })).then(results => {
     t.equal(results.length, 4, 'returns more results if endpoint does so')
   })
 })
