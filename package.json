@@ -27,7 +27,7 @@
     "nock": "^9.6.1",
     "standard": "^12.0.0",
     "standard-version": "*",
-    "tap": "*",
+    "tap": "^12.0.1",
     "weallbehave": "*",
     "weallcontribute": "*"
   },
