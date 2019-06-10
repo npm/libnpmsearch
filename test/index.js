@@ -89,7 +89,7 @@ test('accepts a limit option', t => {
   })
 })
 
-test('accepts an offset option', t => {
+test('accepts a from option', t => {
   const query = qs.stringify({
     text: 'oo',
     size: 20,
@@ -106,7 +106,7 @@ test('accepts an offset option', t => {
       { package: { name: 'cool', version: '1.0.0' } }
     ]
   })
-  return search('oo', OPTS.concat({ offset: 1 })).then(results => {
+  return search('oo', OPTS.concat({ from: 1 })).then(results => {
     t.equal(results.length, 4, 'returns more results if endpoint does so')
   })
 })
