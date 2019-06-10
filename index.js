@@ -60,6 +60,7 @@ function searchStream (query, opts) {
       query: {
         text: Array.isArray(query) ? query.join(' ') : query,
         size: opts.limit,
+        from: opts.from,
         quality: opts.quality,
         popularity: opts.popularity,
         maintenance: opts.maintenance
