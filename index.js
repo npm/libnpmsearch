@@ -7,7 +7,7 @@ const npmFetch = require('npm-registry-fetch')
 const SearchOpts = figgyPudding({
   detailed: { default: false },
   limit: { default: 20 },
-  from: { default: 0 },
+  offset: { default: 0 },
   quality: { default: 0.65 },
   popularity: { default: 0.98 },
   maintenance: { default: 0.5 },
@@ -60,6 +60,7 @@ function searchStream (query, opts) {
       query: {
         text: Array.isArray(query) ? query.join(' ') : query,
         size: opts.limit,
+        from: opts.offset,
         quality: opts.quality,
         popularity: opts.popularity,
         maintenance: opts.maintenance
