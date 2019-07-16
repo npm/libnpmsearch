@@ -1,6 +1,6 @@
 {
   "name": "libnpmsearch",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Programmatic API for searching in npm and compatible registries.",
   "author": {
     "name": "Kat Marchán",
