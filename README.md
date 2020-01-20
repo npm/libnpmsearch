@@ -1,8 +1,23 @@
-# libnpmsearch [![npm version](https://img.shields.io/npm/v/libnpmsearch.svg)](https://npm.im/libnpmsearch) [![license](https://img.shields.io/npm/l/libnpmsearch.svg)](https://npm.im/libnpmsearch) [![Travis](https://img.shields.io/travis/npm/libnpmsearch.svg)](https://travis-ci.org/npm/libnpmsearch) [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/zkat/libnpmsearch?svg=true)](https://ci.appveyor.com/project/zkat/libnpmsearch) [![Coverage Status](https://coveralls.io/repos/github/npm/libnpmsearch/badge.svg?branch=latest)](https://coveralls.io/github/npm/libnpmsearch?branch=latest)
+# libnpmsearch
+
+[![npm version](https://img.shields.io/npm/v/libnpmsearch.svg)](https://npm.im/libnpmsearch)
+[![license](https://img.shields.io/npm/l/libnpmsearch.svg)](https://npm.im/libnpmsearch)
+[![Travis](https://img.shields.io/travis/npm/libnpmsearch.svg)](https://travis-ci.org/npm/libnpmsearch)
+[![Coverage Status](https://coveralls.io/repos/github/npm/libnpmsearch/badge.svg?branch=latest)](https://coveralls.io/github/npm/libnpmsearch?branch=latest)
 
 [`libnpmsearch`](https://github.com/npm/libnpmsearch) is a Node.js library for
 programmatically accessing the npm search endpoint. It does **not** support
 legacy search through `/-/all`.
+
+## Table of Contents
+
+* [Example](#example)
+* [Install](#install)
+* [Contributing](#contributing)
+* [API](#api)
+  * [search opts](#opts)
+  * [`search()`](#search)
+  * [`search.stream()`](#search-stream)
 
 ## Example
 
@@ -30,14 +45,22 @@ console.log(await search('libnpm'))
 
 `$ npm install libnpmsearch`
 
-## Table of Contents
+### Contributing
 
-* [Example](#example)
-* [Install](#install)
-* [API](#api)
-  * [search opts](#opts)
-  * [`search()`](#search)
-  * [`search.stream()`](#search-stream)
+The npm team enthusiastically welcomes contributions and project participation!
+There's a bunch of things you can do if you want to contribute! The
+[Contributor Guide](https://github.com/npm/cli/blob/latest/CONTRIBUTING.md)
+outlines the process for community interaction and contribution. Please don't
+hesitate to jump in if you'd like to, or even ask us questions if something
+isn't clear.
+
+All participants and maintainers in this project are expected to follow the
+[npm Code of Conduct](https://www.npmjs.com/policies/conduct), and just
+generally be excellent to each other.
+
+Please refer to the [Changelog](CHANGELOG.md) for project history details, too.
+
+Happy hacking!
 
 ### API
 
