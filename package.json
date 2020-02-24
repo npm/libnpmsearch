@@ -2,11 +2,7 @@
   "name": "libnpmsearch",
   "version": "2.0.2",
   "description": "Programmatic API for searching in npm and compatible registries.",
-  "author": {
-    "name": "Kat Marchán",
-    "email": "kzm@zkat.tech",
-    "twitter": "maybekatz"
-  },
+  "author": "Kat Marchán <kzm@sykosomatic.org>",
   "keywords": [
     "npm",
     "search",
@@ -19,17 +15,16 @@
     "release": "standard-version -s",
     "postrelease": "npm publish && git push --follow-tags",
     "pretest": "standard",
-    "test": "tap -J --100 test/*.js",
-    "update-coc": "weallbehave -o . && git add CODE_OF_CONDUCT.md && git commit -m 'docs(coc): updated CODE_OF_CONDUCT.md'",
-    "update-contrib": "weallcontribute -o . && git add CONTRIBUTING.md && git commit -m 'docs(contributing): updated CONTRIBUTING.md'"
+    "test": "tap"
+  },
+  "tap": {
+    "check-coverage": true
   },
   "devDependencies": {
     "nock": "^9.6.1",
     "standard": "^12.0.0",
     "standard-version": "*",
-    "tap": "^12.0.1",
-    "weallbehave": "*",
-    "weallcontribute": "*"
+    "tap": "^14.10.6"
   },
   "repository": {
     "type": "git",
@@ -38,7 +33,9 @@
   "bugs": "https://github.com/npm/libnpmsearch/issues",
   "homepage": "https://npmjs.com/package/libnpmsearch",
   "dependencies": {
-    "get-stream": "^4.0.0",
-    "npm-registry-fetch": "^4.0.0"
+    "npm-registry-fetch": "^8.0.0"
+  },
+  "engines": {
+    "node": ">=10"
   }
 }
