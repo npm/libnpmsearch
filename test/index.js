@@ -64,6 +64,35 @@ test('basic test', t => {
   })
 })
 
+test('basic test supports nested options', t => {
+  const query = qs.stringify({
+    text: 'oo',
+    size: 20,
+    from: 1,
+    quality: 0.65,
+    popularity: 0.98,
+    maintenance: 0.5
+  })
+  tnock(t, REG).get(`/-/v1/search?${query}`).once().reply(200, {
+    objects: [
+      { package: { name: 'cool', version: '1.0.0' } },
+      { package: { name: 'foo', version: '2.0.0' } }
+    ]
+  })
+
+  // this test is to ensure we don't break the nested opts parameter
+  // that the cli supplies when a user passes --searchopts=
+  return search('oo', { ...OPTS, opts: { from: 1 } }).then(results => {
+    t.similar(results, [{
+      name: 'cool',
+      version: '1.0.0'
+    }, {
+      name: 'foo',
+      version: '2.0.0'
+    }], 'got back an array of search results')
+  })
+})
+
 test('search.stream', t => {
   const query = qs.stringify({
     text: 'oo',
