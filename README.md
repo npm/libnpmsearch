@@ -1,3 +1,14 @@
+# We've Moved! 🚚
+The code for this repo is now a workspace in the npm CLI repo.
+
+[github.com/npm/cli](https://github.com/npm/cli)
+
+You can find the workspace in /workspaces/libnpmsearch
+
+Please file bugs and feature requests as issues on the CLI and tag the issue with "ws:libnpmsearch".
+
+[github.com/npm/cli/issues](https://github.com/npm/cli)
+
 # libnpmsearch
 
 [![npm version](https://img.shields.io/npm/v/libnpmsearch.svg)](https://npm.im/libnpmsearch)
